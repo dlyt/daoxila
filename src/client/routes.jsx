@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './containers/Home';
-import { Router,Route } from 'react-router';
+import { Router, Route } from 'react-router';
 import createHistory from 'history/createHashHistory';
 
 const history = createHistory();

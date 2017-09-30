@@ -9,14 +9,17 @@ const app = new Koa();
 
 //配置webpack
 const devMiddleware = webpackMiddleware.devMiddleware;
-// const hotMiddleware = webpackMiddleware.hotMiddleware;
+const hotMiddleware = webpackMiddleware.hotMiddleware;
 const webpackConf = require('../webpack.config');
 const compiler = webpack(webpackConf);
 app.use(devMiddleware(compiler, {
 	noInfo: true,		//是否打印 Hash Version等信息
 	publicPath: webpackConf.output.publicPath
 }));
-// app.use(hotMiddleware(compiler));
+// 热加载
+app.use(hotMiddleware(compiler, {
+	log: () => {}
+}));
 app.use(convert(mount('/', serve(`${process.cwd()}/src/client`))));
 
 app.listen(3000, () => {
