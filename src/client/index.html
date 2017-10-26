@@ -2,15 +2,22 @@
 <html>
   <head>
     <title>daoxila</title>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-touch-fullscreen" content="yes"/>
-    <meta name="full-screen" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
   </head>
+  <script type='text/javascript'>
+    let cssEl = document.createElement('style');
+    document.documentElement.firstElementChild.appendChild(cssEl);
+    window.addEventListener('resize',function setPxPerRem(){
+        const pxPerRem = document.documentElement.clientWidth / 6.4;
+        cssEl.innerHTML = 'html{font-size:' + pxPerRem + 'px!important;}';
+    })
+    // 触发 resize 事件
+    let e = document.createEvent('Event');
+    e.initEvent('resize', true, true);
+    window.dispatchEvent(e);
+  </script>
   <body>
-    <div id="root"></div>
-    <script src="/dist/bundle.js"></script>
+    <div id='root'></div>
+    <script src='/dist/bundle.js'></script>
   </body>
 </html>

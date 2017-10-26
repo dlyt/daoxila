@@ -2,6 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
+function resolve (dir) {
+    return path.join(__dirname, '.', dir);
+}
+
 module.exports = {
     entry: {
         app: [ 'webpack-hot-middleware/client?reload=1', './src/client/index.js' ]
@@ -16,7 +20,10 @@ module.exports = {
         new FriendlyErrorsPlugin()
     ],
     resolve: {
-        extensions: ['.js', '.jsx', '.json']
+        extensions: ['.js', '.jsx', '.json'],
+        alias: {
+            'components': resolve('src/client/components'),
+        }
     },
     module: {
         loaders: [
@@ -26,7 +33,7 @@ module.exports = {
                 loader: 'babel-loader',
                 include: [ path.join(__dirname, 'src/client') ],
                 options: {
-                    presets: ['es2015', 'react'],
+                    presets: ['es2015', 'react', 'stage-0'],
                 }
             },
             {
