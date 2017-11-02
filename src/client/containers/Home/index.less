@@ -352,27 +352,26 @@ footer {
   }
 }
 
-
-.card-container > .ant-tabs-card > .ant-tabs-content {
-  height: 120px;
-  margin-top: -16px;
+// 回到顶部
+#backTop {
+  z-index: 6;
+  position: fixed;
+  right: .3rem;
+  bottom: .8rem;
+  width: .8rem;
+  height: .8rem;
+  background-image: url('//s5.dxlfile.com/img/c4b6f429ea6272c39fb395400ddba55a.png');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-color: rgba(0,0,0,.64);
+  background-size: .8rem auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  display: none;
 }
 
-.card-container > .ant-tabs-card > .ant-tabs-content > .ant-tabs-tabpane {
-  background: #fff;
-  padding: 16px;
-}
-
-.card-container > .ant-tabs-card > .ant-tabs-bar {
-  border-color: #fff;
-}
-
-.card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
-  border-color: transparent;
-  background: transparent;
-}
-
-.card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
-  border-color: #fff;
-  background: #fff;
+@keyframes slideX{ 
+  0%{transform: translateX(-5rem);}                       
+  60%{transform: translateX(1.25rem);}                 
+  100%{transform: translateX(0);}                 
 }

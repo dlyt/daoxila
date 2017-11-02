@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import Carousel from 'components/Carousel';
 import Tabs, { TabPane } from 'components/Tabs';
+import { BackTop } from 'antd';
 
 import './index.less';
 				
@@ -789,6 +790,9 @@ class Home extends PureComponent {
 					<h3>CopyRight 2017 沪ICP备10039145号</h3>
 					<h3>上海到喜啦信息技术有限公司</h3>
 				</footer>
+				<BackTop>
+					<div id="backTop" style={{display: "block"}}></div>
+				</BackTop>
             </div>
         );
     }
