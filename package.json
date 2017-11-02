@@ -28,11 +28,13 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
-    "react-slick": "^0.15.4"
+    "react-slick": "^0.15.4",
+    "rc-tabs": "~9.1.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-import": "^1.6.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
@@ -43,6 +45,7 @@
     "koa-webpack-middleware": "^1.0.7",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
+    "rc-tabs": "^9.1.10",
     "style-loader": "^0.18.2",
     "webpack": "^3.6.0"
   }

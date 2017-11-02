@@ -1,7 +1,41 @@
-body {
-  margin: auto;
+// 公共
+dd, dl, dt, li, ol, ul {
+  list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+body, ul, li, p, h3 {
+  padding: 0;
+  margin: 0;
+  font-size: .2rem;
+}
+
+h3 {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+// 首页
+body {
+  margin: auto;
+  background: #f0f0f0;
+}
+
+a {
+  color: #7a7a7a; 
+}
+
+i {
+  font-style: normal;
+}
+// 头部
 header {
   background: #f0f0f0;
   padding: .1rem 0;
@@ -77,4 +111,268 @@ header {
 
 img {
   width: 100%
+}
+
+// icon
+.hotChannel {
+  border-top: 0;
+  padding-top: .22rem;
+  .landSlide {
+    animation: slideX 1s ease;
+    overflow: auto;
+    li { 
+      width: 25%;
+      float: left;
+      text-align: center;
+      font-size: 1rem;
+      a {
+        display: block;
+        position: relative;
+        img {  
+          position: absolute;
+          top: 0;
+          left: 50%;
+          margin-left: -.38rem;
+          width: .76rem;
+          height: auto;
+        }
+        span {
+          color: #333;
+          line-height: .3rem;
+          height: .3rem;
+          font-size: .2rem;
+        }
+      }
+    }
+  }
+}
+
+.pubItem {
+  width: 100%;
+  margin: 0 auto .2rem;
+  background: #fff;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-color: #d8d8d8;
+  border-width: 1px 0;
+  border-style: solid;
+  .tit {
+    line-height: .8rem;
+    color: #333;
+    font-size: .24rem;
+    margin: 0;
+    a {
+      display: inline-block;
+      float: right;
+      color: #999;
+      padding-right: .22rem;
+      background: url("//s5.dxlfile.com/img/1c58d343375cb934c75eee3c08b533c7.png") no-repeat 100%;
+      background-size: .12rem auto;
+    }
+  }
+}
+
+// 广告位
+.adImg a, .adImg a img {
+  display: block;
+}
+
+// tips
+.inTips {
+  background: #fff;
+  ul {
+    overflow: auto;
+    li {
+      width: 33%;
+      float: left;
+      text-align: center;
+      border-right: 1px solid #f0f0f0;
+      position: relative;
+      padding-bottom: 1rem;
+      background-position: center 1rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      h3 {
+        font-size: .24rem;
+        color: #333;
+        a {
+          display: block;
+          padding: .12rem 0 .03rem;
+        }
+      }
+      div {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        img {
+          width: 44%;
+          height: auto;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+// 横向业务列表
+.itemType {
+  padding: 0 3%;
+  li {
+    float: left;
+    width: 32%;
+    text-align: center;
+    margin-right: 2%;
+    min-height: 1rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    p {
+      color: #333;
+      line-height: .6rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: .2rem;
+    }
+    .img {
+      img {
+        display: block;
+      }
+    }
+  }
+  li:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+// 业务列表
+.all {
+  padding-bottom: .3rem;
+  background: #fff;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-color: #d8d8d8;
+  border-width: 1px 0;
+  border-style: solid;
+  .allNav {
+    border-bottom: 1px solid #d7d7d7;
+    width: 100%;
+    li {
+      font-size: .26rem;
+      color: #333;
+      float: left;
+      width: 25%;
+      line-height: .78rem;
+      text-align: center;
+    } 
+    .cur {
+      color: #f36;
+      position: relative;
+      &:before {
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        height: .08rem;
+        width: 100%;
+        background: #f36;
+        content: "";
+      }
+    }
+  }
+  .allItem {
+    padding: 0 3%;
+    li {
+      padding: .18rem 0;
+      position: relative;
+      border-bottom: 1px solid #f0f0f0;
+      background: #fff;
+      min-height: 1.08rem;
+      img {
+        width: 1.7rem;
+        height: 1.08rem;
+        position: absolute;
+        left: 0;
+        top: .18rem;
+        border-radius: 4px;
+      }
+    }
+    .allPartRi {
+      margin-left: 1.88rem;
+      h3 {
+        font-size: .24rem;
+        color: #333;
+        line-height: .4rem;
+        height: .4rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .riInfo {
+        line-height: .4rem;
+        .price {
+          color: #f36;
+          padding-right: .14rem;
+        }
+        .sells {
+          color: #999;
+        }
+      }
+    }
+  }
+  .more {
+    text-align: center;
+    margin: .26rem auto 0;
+    width: 30%;
+    line-height: .48rem;
+    border-radius: .4rem;
+    border: 1px solid #cba97a;
+    a {
+      display: block;
+      color: #cba97a;
+      font-size: .24rem;
+    }
+  }
+}
+
+// 底部
+footer {
+  width: 100%;
+  background: #f0f0f0;
+  line-height: .6rem;
+  text-align: center;
+  padding: .2rem 0;
+  margin-bottom: 1rem;
+  a {
+    font-size: .2rem;
+    padding: .1rem .3rem;
+  }
+  h3 {
+    line-height: .6rem;
+    color: #b2b2b2;
+    font-size: .2rem;
+  }
+}
+
+
+.card-container > .ant-tabs-card > .ant-tabs-content {
+  height: 120px;
+  margin-top: -16px;
+}
+
+.card-container > .ant-tabs-card > .ant-tabs-content > .ant-tabs-tabpane {
+  background: #fff;
+  padding: 16px;
+}
+
+.card-container > .ant-tabs-card > .ant-tabs-bar {
+  border-color: #fff;
+}
+
+.card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+  border-color: transparent;
+  background: transparent;
+}
+
+.card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
+  border-color: #fff;
+  background: #fff;
 }
